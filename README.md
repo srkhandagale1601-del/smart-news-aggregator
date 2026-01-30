@@ -43,3 +43,45 @@ This project demonstrates clean backend architecture, RESTful routing, server-si
 ```bash
 git clone https://github.com/srkhandagale1601-del/smart-news-aggregator.git
 cd YOUR_REPO_NAME
+```
+### 2️⃣ Install dependencies
+```
+npm install
+```
+### 3️⃣ Set up environment variables
+
+Create a `.env` file in the root directory:
+```
+API_KEY=your_news_api_key_here
+```
+### 4️⃣ Start the server
+```
+npm start
+```
+OR(if using nodemon)
+```
+npm run dev
+```
+The server will start on:
+```
+https://localhost:3000
+```
+---
+
+## 🔗 API Endpoints
+### 🔍 Search Articles by Date
+```
+GET /search?date=YYYY-MM-DD
+```
+Example:
+```
+GET /search?date=2025-01-20
+```
+## 🔮 Future Improvements
+
+- Add pagination and sorting support
+- Allow searching by author or keyword
+- Improve UI with better loading and empty states
+- Cache API responses for better performance
+- Add user authentication for personalized searches
+
