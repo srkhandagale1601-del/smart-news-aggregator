@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Smart News Aggregator</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <h1>📰 Smart News Aggregator</h1>
+
+  <form action="/search" method="GET">
+    <input type="date" name="date" placeholder="Search news according to date!!!" />
+    <button type="submit">Search</button>
+  </form>
+
+  <% if (error) { %>
+    <p style="color: red;"><%= error %></p>
+  <% } %>
+
+  <% if (articles) { %>
+    <ul>
+      <% articles.forEach(articles => { %>
+        <li>
+          <h3><%= articles.title %></h3>
+          <p>Author : <%= articles.author %></p>
+          <p><%= articles.description %></p>
+          <a href="<%= articles.url %>" target="_blank">Read more</a>
+        </li>
+      <% }) %>
+    </ul>
+  <% } %>
+
+</body>
+</html>
